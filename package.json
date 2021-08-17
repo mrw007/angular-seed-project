@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "fixinstall": "rm -rfv node_modules/* package-lock.json && npm run clean && npm install",
-    "clean": "npm cache clean --force"
+    "clean": "npm cache clean --force",
+    "compodoc": "npx compodoc -p tsconfig.json --theme Materialdesign"
   },
   "private": true,
   "dependencies": {
@@ -31,6 +32,7 @@
     "@angular-devkit/build-angular": "~12.2.1",
     "@angular/cli": "~12.2.1",
     "@angular/compiler-cli": "~12.2.0",
+    "@compodoc/compodoc": "^1.1.14",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
     "jasmine-core": "~3.8.0",
