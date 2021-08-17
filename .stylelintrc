@@ -1,0 +1,8 @@
+{  
+  "rules": {    
+    "string-quotes": "single",
+    "number-leading-zero": "never",
+    "unit-whitelist": ["em", "rem", "s", "%","px","vh","vw", "deg"],
+    "no-missing-end-of-source-newline":true
+  }
+}

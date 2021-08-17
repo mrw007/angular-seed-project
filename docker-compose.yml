@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  angular:
+    hostname: localhost
+    container_name: angular_seed_project_dev
+    build: .
+    restart: always
+    volumes:
+      - .:/angular-seed-project
+      - /usr/src/angular-seed-project/node_modules
+    tty: true
+    ports:
+      - 8080:4200
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
