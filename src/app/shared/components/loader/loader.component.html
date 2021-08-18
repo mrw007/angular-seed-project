@@ -1,0 +1,7 @@
+<mat-progress-bar
+  class="overlay"
+  [hidden]="!(!!(isLoading | async))"
+  [color]="color"
+  [mode]="mode"
+  [value]="value | async"
+></mat-progress-bar>

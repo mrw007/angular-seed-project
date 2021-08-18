@@ -1,0 +1,8 @@
+.overlay {
+  position: fixed;
+  z-index: 99999;
+
+  &.mat-progress-bar {
+    height: 3px;
+  }
+}
