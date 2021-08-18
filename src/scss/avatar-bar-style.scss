@@ -1,0 +1,145 @@
+@import '~@angular/material/theming';
+
+@mixin avatar-bar-theme($theme, $colors) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+
+  .avatar-bar {
+    .avatar-circle {
+      cursor: pointer;
+    }
+    mat-toolbar {
+      margin-top: 0;
+      padding-right: 1%;
+      padding-left: 1%;
+      background-color: transparent !important;
+      float: right;
+
+      .notification-bell {
+        color: map-get($colors, avatar-bar);
+      }
+
+      p {
+        margin-top: 1%;
+        margin-bottom: 1%;
+        font-family: 'Montserrat', Sans-serif;
+        font-weight: lighter;
+        color: map-get($colors, avatar-bar);
+        font-size: 1rem;
+      }
+
+      .side-nav-toggle {
+        color: map-get($colors, avatar-bar);
+        display: flex;
+        margin-left: 0.5%;
+        justify-content: center;
+      }
+
+      .logo {
+        display: none;
+
+        @media (max-width: 720px) {
+          margin-top: 5px;
+          width: 100px;
+          display: flex;
+          height: auto;
+          align-content: center;
+        }
+      }
+
+      .profile-name {
+        display: flex;
+
+        @media (max-width: 480px) {
+          display: none;
+        }
+      }
+    }
+
+    .example-spacer {
+      flex: 1 1 auto;
+    }
+  }
+  .notification-menu {
+    color: map-get($colors, text);
+    background-color: map-get($colors, container-background);
+    max-width: 350px;
+
+    h6 {
+      font-family: 'Montserrat', Sans-serif;
+      margin: 0;
+      font-size: 0.9em;
+      font-weight: bold;
+    }
+
+    small {
+      font-family: 'Montserrat', Sans-serif;
+      color: map-get($colors, text);
+    }
+
+    .notification-item {
+      outline: none;
+      justify-content: center;
+
+      .notification-row {
+        padding: 8px 0px 4px;
+        margin: 5px 0px;
+        transition: 0.6s;
+
+        .delete-notification {
+          display: none;
+        }
+        &:hover {
+          cursor: pointer;
+          background-color: rgba(255, 86, 34, 0.233);
+          border-radius: 15px;
+
+          .delete-notification {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            margin-right: -7px;
+            opacity: 0.3;
+          }
+        }
+      }
+    }
+  }
+
+  .notification-image {
+    opacity: 0.75;
+  }
+
+  .app-text-loader {
+    app-loader-skeleton {
+      display: inline-grid;
+    }
+  }
+
+  .mark-all-as-viewed {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2px;
+    margin-bottom: 5px;
+    margin-top: -7px;
+    font-size: 14px;
+  }
+
+  .view-more {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .notification-date {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    font-size: 0.7em;
+    font-weight: 700;
+    font-family: 'Montserrat', Sans-serif;
+    color: map-get($colors, text);
+    padding-right: 13px;
+    padding-top: 5px;
+  }
+}

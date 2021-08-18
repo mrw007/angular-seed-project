@@ -1,0 +1,78 @@
+<div class="avatar-bar">
+  <mat-toolbar>
+    <button
+      mat-icon-button
+      class="side-nav-toggle"
+      (click)="toggleRightSidenav()"
+      [hidden]="!enabled"
+      style="outline: none"
+    >
+      <em class="fas fa-bars fa-2x"> </em>
+    </button>
+    <a>
+      <img
+        class="logo"
+        src="../../../assets/images/company_logo.svg"
+        alt="logo"
+      />
+    </a>
+    <span class="example-spacer"></span>
+    <button
+      class="notification-bell"
+      mat-icon-button
+      matBadgeColor="accent"
+      [matMenuTriggerFor]="menu"
+      style="outline: none"
+    >
+      <em
+        [matBadge]="notificationCounter"
+        [matBadgeHidden]="notificationCounter === 0"
+        matBadgeColor="warn"
+        matBadgePosition="before"
+        class="far fa-bell fa-lg"
+      >
+      </em>
+    </button>
+    <mat-menu #menu="matMenu" class="container-fluid notification-menu">
+      <div style="max-height: 300px"></div>
+    </mat-menu>
+    <mat-menu #avatarMenu="matMenu">
+      <button style="display: flex; align-items: baseline" mat-menu-item>
+        <mat-icon>
+          <em class="fas fa-cog fa-sm"></em>
+        </mat-icon>
+        <span>Paramètres</span>
+      </button>
+      <button style="display: flex; align-items: baseline" mat-menu-item>
+        <mat-icon>
+          <em class="fas fa-sign-out-alt fa-sm"></em>
+        </mat-icon>
+        <span>Se déconnecter</span>
+      </button>
+    </mat-menu>
+
+    <p class="profile-name">
+      &nbsp; {{ getGreeting() }}, {{ name }} &nbsp;&nbsp;
+    </p>
+    <app-avatar
+      [name]="name"
+      [email]="email"
+      [displayType]="'circle'"
+      size="43"
+      background="#ff5722"
+      [matMenuTriggerFor]="avatarMenu"
+      class="avatar-circle"
+    ></app-avatar>
+  </mat-toolbar>
+</div>
+
+<ng-template #noNotification>
+  <div>
+    <img
+      class="notification-image"
+      src="../../../../assets/images/no-notification.svg"
+      alt="no notifications"
+    />
+  </div>
+  <small style="justify-content: center">Rien de nouveau</small>
+</ng-template>
