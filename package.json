@@ -9,7 +9,7 @@
     "test": "ng test",
     "fixinstall": "rm -rfv node_modules/* package-lock.json && npm run clean && npm install",
     "clean": "npm cache clean --force",
-    "compodoc": "npx compodoc -p tsconfig.json --theme Materialdesign"
+    "compodoc": "npx compodoc -p tsconfig.app.json --theme Materialdesign"
   },
   "private": true,
   "dependencies": {
