@@ -1,1 +1,45 @@
-<p>secure works!</p>
+<mat-sidenav-container class="main-nav-container">
+  <mat-sidenav
+    class="main-side-nav"
+    [mode]="isScreenSmall() ? 'over' : 'side'"
+    [fixedInViewport]="isScreenSmall()"
+    mode="over"
+    [opened]="!isScreenSmall()"
+  >
+    <a [routerLink]="['']">
+      <img class="logo" src="../../assets/images/company_logo.svg" alt="logo" />
+    </a>
+    <div class="icon-bar">
+      <a
+        [routerLink]="['home']"
+        [routerLinkActive]="['is-active']"
+        id="step1-menu-item"
+      >
+        <em
+          class="fa fa-home"
+          matTooltip="Hoome"
+          matTooltipPosition="right"
+        >
+        </em>
+      </a>
+      <a
+        [routerLink]="['mutuelles']"
+        [routerLinkActive]="['is-active']"
+        id="step2-menu-item"
+      >
+        <em
+          class="far fa-file-alt"
+          matTooltip="Règlements mutuelles"
+          matTooltipPosition="right"
+        >
+        </em>
+      </a>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content
+    class="main-sidenav-content"
+    [@routeAnimations]="o.isActivated && o.activatedRoute.routeConfig?.path"
+  >
+    <router-outlet #o="outlet"></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
