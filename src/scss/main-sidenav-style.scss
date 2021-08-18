@@ -1,0 +1,89 @@
+@import '~@angular/material/theming';
+
+@mixin main-sidenav-theme($theme, $colors) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+
+  .main-nav-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    .mat-drawer-side {
+      border-right: none;
+    }
+
+    .is-inset {
+      box-shadow: inset -30px 0 30px -20px map-get($colors, nav-box-shadow);
+    }
+
+    .main-side-nav {
+      width: 120px;
+      background-color: map-get($colors, container-background);
+
+      .logo {
+        height: auto;
+        align-content: center;
+        display: block;
+        margin: 25px 15px 50px 20px;
+      }
+
+      .icon-bar {
+        background-color: transparent;
+
+        a {
+          display: block;
+          // Make the links appear below each other instead of side-by-side
+          text-align: center;
+          // Center-align text
+          padding: 30px;
+          // Add some padding
+          transition: all .3s ease;
+          // Add transition for hover effects
+          color: map-get($colors, main-nav-icon);
+          // White text color
+          font-size: 1.3em;
+          // Increased font-size
+        }
+
+        .is-active {
+          color: mat-color($accent) !important;
+          text-shadow: 0px 0px 8px mat-color($accent);
+          // Add an active/current color
+        }
+      }
+    }
+
+    .main-sidenav-content {
+      background-color: map-get($colors, container-background);
+    }
+
+    @media (max-width: 576px) {
+      mat-sidenav {
+        width: 70px;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      mat-sidenav {
+        width: 100px;
+      }
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 1024px) {
+      mat-sidenav {
+        width: 100px;
+      }
+    }
+
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1500px) {
+      mat-sidenav {
+        width: 120px;
+      }
+    }
+  }
+}

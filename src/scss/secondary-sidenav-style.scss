@@ -1,0 +1,126 @@
+@import '~@angular/material/theming';
+
+@mixin secondary-sidenav-theme($theme, $colors) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+
+  .secondary-nav-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    .mat-drawer-side {
+      border-right: none;
+    }
+
+    .secondary-nav-content {
+      background-color: map-get($colors, container-background);
+    }
+
+    .secondary-sidenav {
+      width: 18%;
+      box-shadow: inset -30px 0 30px -20px map-get($colors, nav-box-shadow);
+      background-color: map-get($colors, container-background);
+
+      .module-name {
+        font-family: 'Montserrat', Sans-serif;
+        display: inline-block;
+        padding-left: 11%;
+        padding-top: 11%;
+        padding-bottom: 11%;
+        margin-top: 2%;
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 1.3rem;
+        font-weight: 500;
+        white-space: nowrap;
+        flex: 1;
+        color: map-get($colors, header-2);
+      }
+
+      mat-list {
+        padding-left: 5%;
+
+        %mat-list-item-tr,
+        mat-list-item:hover {
+          background: #80808023;
+          border-top-left-radius: 39px;
+          border-bottom-left-radius: 39px;
+          cursor: pointer;
+        }
+
+        mat-list-item {
+          outline: none;
+          height: 45px;
+
+          h5 {
+            font-family: 'Montserrat', Sans-serif;
+            color: map-get($colors, header-5);
+            font-size: 0.9em;
+          }
+
+          em {
+            margin-left: 12%;
+            margin-top: 1%;
+            text-align: center;
+            color: map-get($colors, header-5);
+            font-size: 1.2rem;
+          }
+        }
+
+        .static-menu-item {
+          @extend mat-list-item;
+        }
+
+        .static-menu-item:hover {
+          @extend %mat-list-item-tr;
+          cursor: default;
+          background: transparent;
+        }
+      }
+
+      .is-active {
+        background-color: mat-color($accent) !important;
+        border-top-left-radius: 39px;
+        border-bottom-left-radius: 39px;
+        box-shadow: 0 0 8px mat-color($accent);
+        outline: none;
+
+        // Add an active/current color
+        h5 {
+          color: white;
+          font-weight: bold;
+        }
+
+        em {
+          color: white;
+        }
+      }
+    }
+
+    @media (max-width: 576px) {
+      .secondary-sidenav {
+        width: 350px;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      .secondary-sidenav {
+        width: 320px;
+      }
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 1024px) {
+      .secondary-sidenav {
+        width: 300px;
+
+        .module-name {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+// Light Theme color variables
+$colors-default-theme: (
+  // Header1
+  header-1: #585858,
+  // Header2,
+  header-2: #585858,
+  // Header3,
+  header-3: #bebfc0,
+  // Header5,
+  header-5: #808080,
+  // Page Title,
+  page-title: #585858,
+  // Text,
+  text: #585858,
+  // Btn Text,
+  btn-text: white,
+  // Reset btn text,
+  btn-reset-text: white,
+  // Reset btn background,
+  btn-background-reset: #808080,
+  // Table Header,
+  table-header: #686868,
+  // Container Background,
+  container-background: white,
+  // Avatar Toolbar Background,
+  avatar-toolbar: white,
+  // Navigation box Shadow,
+  nav-box-shadow: #c3cbde44,
+  // Main nav Icon Color,
+  main-nav-icon: #bebfc0e3,
+  // avatar text/icon color,
+  avatar-bar: #808080,
+  // skeleton loader Background
+  skeleton-background: rgb(239, 241, 246),
+  // skeleton Loader Animation Initial Color
+  skeleton-init-color: rgba(255, 255, 255, 0),
+  // skeleton Loader Animation transition Color
+  skeleton-transition-color: rgba(255, 255, 255, 0.6),
+  // Task card color
+  task-card-color: #fff475,
+  // Task card list color
+  task-card-list-color: #FFF9AE
+);
+
+// Dark Theme color variables
+$colors-dark-theme: (
+  // Header1
+  header-1: white,
+  // Header2,
+  header-2: white,
+  // Header3,
+  header-3: white,
+  // Header5,
+  header-5: #c3c3c3,
+  // Page Title,
+  page-title: white,
+  // Text,
+  text: white,
+  // Btn Text,
+  btn-text: white,
+  // Reset btn text,
+  btn-reset-text: #808080,
+  // Reset btn background,
+  btn-background-reset: white,
+  // Table Header,
+  table-header: white,
+  // Container Background,
+  container-background: #303030,
+  // Avatar Toolbar Background,
+  avatar-toolbar: #424242,
+  // Navigation box Shadow,
+  nav-box-shadow: #0000002f,
+  // Main nav Icon Color,
+  main-nav-icon: #c3c3c3a2,
+  // avatar text/icon color,
+  avatar-bar: #c3c3c3a2,
+  // skeleton loader Background
+  skeleton-background: #505050,
+  // skeleton Loader Animation Initial Color
+  skeleton-init-color: transparent,
+  // skeleton Loader Animation transition Color
+  skeleton-transition-color: rgba(0, 0, 0, 0.2),
+  // Task card color
+  task-card-color: #77723a,
+  // Task card list color
+  task-card-list-color: #9b986d
+);

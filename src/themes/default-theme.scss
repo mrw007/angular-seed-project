@@ -1,0 +1,14 @@
+@use '~@angular/material' as mat;
+
+$candy-app-primary: mat.define-palette(mat.$blue-palette);
+$candy-app-accent: mat.define-palette(mat.$teal-palette);
+$candy-app-warn: mat.define-palette(mat.$red-palette, 500);
+$candy-app-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $candy-app-primary,
+      accent: $candy-app-accent,
+      warn: $candy-app-warn,
+    ),
+  )
+);
