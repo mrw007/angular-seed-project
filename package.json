@@ -44,6 +44,7 @@
     "@angular/cli": "~12.2.1",
     "@angular/compiler-cli": "~12.2.0",
     "@compodoc/compodoc": "^1.1.14",
+    "@ngrx/schematics": "^12.4.0",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "4.28.2",
