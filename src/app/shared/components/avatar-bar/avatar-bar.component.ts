@@ -55,13 +55,13 @@ export class AvatarBarComponent implements OnInit {
   getGreeting(): string {
     const time = new Date().getHours(); // Determine part of the day
     if (time >= 22 || time < 5) {
-      return 'Bonjour';
+      return 'Good Morning';
     } else if (time >= 18) {
-      return 'Bonsoir';
+      return 'Good Evening';
     } else if (time >= 12) {
-      return 'Bon après-midi';
+      return 'Good Afternoon';
     } else {
-      return 'Bonjour';
+      return 'Hello';
     } // Define the greetings
   }
 }
