@@ -39,10 +39,9 @@
         display: none;
 
         @media (max-width: 720px) {
-          margin-top: 5px;
-          width: 100px;
+          margin-top: -5px;
           display: flex;
-          height: auto;
+          height: 35px;
           align-content: center;
         }
       }

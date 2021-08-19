@@ -10,11 +10,7 @@
       <em class="fas fa-bars fa-2x"> </em>
     </button>
     <a>
-      <img
-        class="logo"
-        src="../../../assets/images/company_logo.svg"
-        alt="logo"
-      />
+      <img class="logo" src="../../../assets/svgs/logo-mw.svg" alt="logo" />
     </a>
     <span class="example-spacer"></span>
     <button
@@ -34,20 +30,16 @@
       </em>
     </button>
     <mat-menu #menu="matMenu" class="container-fluid notification-menu">
-      <div style="max-height: 300px"></div>
+      <div style="max-height: 300px">
+        <ng-container *ngTemplateOutlet="noNotification"> </ng-container>
+      </div>
     </mat-menu>
     <mat-menu #avatarMenu="matMenu">
       <button style="display: flex; align-items: baseline" mat-menu-item>
         <mat-icon>
-          <em class="fas fa-cog fa-sm"></em>
-        </mat-icon>
-        <span>Paramètres</span>
-      </button>
-      <button style="display: flex; align-items: baseline" mat-menu-item>
-        <mat-icon>
           <em class="fas fa-sign-out-alt fa-sm"></em>
         </mat-icon>
-        <span>Se déconnecter</span>
+        <span>Logout</span>
       </button>
     </mat-menu>
 
@@ -70,9 +62,9 @@
   <div>
     <img
       class="notification-image"
-      src="../../../../assets/images/no-notification.svg"
+      src="../../../../assets/svgs/no-notification.svg"
       alt="no notifications"
     />
   </div>
-  <small style="justify-content: center">Rien de nouveau</small>
+  <small style="justify-content: center">Nothing New</small>
 </ng-template>
