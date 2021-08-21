@@ -10,6 +10,7 @@ import { TokenStorageService } from './core/services/token-storage.service';
   animations: [routeAnimations],
 })
 export class AppComponent implements OnInit {
+  title = 'angular-seed-project';
   /**
    * Constructor
    * @param themeService theme Service
