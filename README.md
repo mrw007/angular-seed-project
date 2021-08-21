@@ -1,4 +1,7 @@
-# AngularSeedProject
+# Angular seed project
+by [@Mr_w_007](https://twitter.com/Mr_w_007).
+
+![Codecov](https://img.shields.io/codecov/c/github/mrw007/angular-seed-project)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
 
