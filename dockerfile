@@ -20,7 +20,7 @@ RUN npm run clean
 RUN npm install
 
 # Expose ports
-EXPOSE 4200
+EXPOSE 4200 9876
 
 # Infinite loop command to keep the container running
 CMD tail -f /dev/null

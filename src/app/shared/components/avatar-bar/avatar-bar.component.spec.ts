@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { AvatarBarComponent } from './avatar-bar.component';
 
@@ -8,18 +9,14 @@ describe('AvatarBarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AvatarBarComponent ]
-    })
-    .compileComponents();
+      imports: [FormsModule],
+      declarations: [AvatarBarComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(AvatarBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
   });
 });

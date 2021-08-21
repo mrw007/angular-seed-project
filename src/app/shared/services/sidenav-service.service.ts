@@ -4,7 +4,9 @@ import { MatSidenav } from '@angular/material/sidenav';
 /**
  * Side Navigation Control Service
  */
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class SidenavServiceService {
   /**
    * Side Navigation Component

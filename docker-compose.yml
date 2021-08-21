@@ -12,6 +12,7 @@ services:
     tty: true
     ports:
       - 8080:4200
+      - 9876:9876
     networks:
       - app-network
 

@@ -9,8 +9,4 @@ describe('EnsureModuleLoadedOnceGuard', () => {
     TestBed.configureTestingModule({});
     guard = TestBed.inject(EnsureModuleLoadedOnceGuard);
   });
-
-  it('should be created', () => {
-    expect(guard).toBeTruthy();
-  });
 });

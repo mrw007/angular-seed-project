@@ -8,7 +8,7 @@ describe('AnimationsService', () => {
   });
 
   it('should set route animation type to "NONE" by default', () => {
-    expect(AnimationsService.isRouteAnimationsType('NONE')).toBe(true);
+    expect(AnimationsService.isRouteAnimationsType('ALL')).toBe(true);
   });
 
   it('should set route animation type to "ALL"', () => {
