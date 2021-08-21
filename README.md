@@ -40,7 +40,7 @@ This is an Angular project seed based on [Angular](https://angular.io/) 12.
 
 The project is intended to be developed in a docker environment, so it is recommended to install version 20 or higher [Docker](https://www.docker.com/community-edition) version.
 
-The dockerized project have dependencies that require Node 14, NPM 6 or higher [NodeJS](https://nodejs.org/en/).
+The dockerized project have dependencies that require Node 14, NPM 6 or higher [NodeJS](https://nodejs.org/en/) version.
 
 ## 🚧 Installation
 
@@ -187,7 +187,7 @@ To get more help about Ngrx, check out [NgRx's official documentation](https://n
 
 ---
 
-You can generate the Project's documentation using [compodoc](https://compodoc.app/) using the following command, inside the running container
+You can generate the Project's documentation with [compodoc](https://compodoc.app/) using the following command, inside the running container
 
 ```bash
 npm run compodoc
