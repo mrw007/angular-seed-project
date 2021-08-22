@@ -88,57 +88,11 @@
         .delete-notification {
           display: none;
         }
-        &:hover {
-          cursor: pointer;
-          background-color: rgba(255, 86, 34, 0.233);
-          border-radius: 15px;
-
-          .delete-notification {
-            display: flex;
-            align-items: flex-end;
-            flex-direction: column;
-            margin-right: -7px;
-            opacity: 0.3;
-          }
-        }
       }
     }
   }
 
   .notification-image {
     opacity: 0.75;
-  }
-
-  .app-text-loader {
-    app-loader-skeleton {
-      display: inline-grid;
-    }
-  }
-
-  .mark-all-as-viewed {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 2px;
-    margin-bottom: 5px;
-    margin-top: -7px;
-    font-size: 14px;
-  }
-
-  .view-more {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-  }
-
-  .notification-date {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    font-size: 0.7em;
-    font-weight: 700;
-    font-family: 'Montserrat', Sans-serif;
-    color: map-get($colors, text);
-    padding-right: 13px;
-    padding-top: 5px;
   }
 }

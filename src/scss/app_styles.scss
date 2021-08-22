@@ -8,27 +8,6 @@
     outline: none !important;
   }
 
-  .filter-input {
-    width: 100%;
-    padding: 10px 10px 5px;
-    color: map-get($colors, text);
-  }
-
-  .no-result {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 20px;
-    color: map-get($colors, text);
-  }
-
-  .full-page-container {
-    background-color: map-get($colors, container-background);
-    color: map-get($colors, text);
-    margin-left: 0;
-    margin-right: 0;
-    height: 100vh;
-  }
-
   div {
     box-sizing: border-box;
   }
@@ -62,11 +41,10 @@
     h1 {
       font-family: 'Montserrat', Sans-serif;
       color: map-get($colors, header-1);
-      margin-bottom: 3%;
+      margin-bottom: 2%;
 
       @media (max-width: 600px) {
         font-size: 1.3rem;
-        //   margin: 80px 0 30px 0;
         font-weight: bold;
       }
     }
@@ -108,46 +86,12 @@
       flex: 1 1 auto;
     }
 
-    .filters {
-      .filter-container {
-        display: flex;
-        flex-direction: row;
-
-        mat-form-field {
-          flex: 1 1 auto;
-          margin-right: 0.5%;
-        }
-      }
-    }
-
-    #add-bul,
-    #bul-num {
-      font-family: 'Montserrat', Sans-serif;
-      font-weight: normal;
-      font-size: 2rem;
-      color: map-get($colors, page-title);
-      display: inline-flex;
-      margin-bottom: 0;
-
-      @media (max-width: 720px) {
-        font-size: 1.3rem;
-      }
-    }
-
     .btn {
       margin-top: -1%;
       border-radius: 39px;
       font-family: 'Montserrat', Sans-serif;
       padding: 0.25em 2em 0.25em 2em;
       color: white;
-
-      &-green {
-        background: #15b76c;
-      }
-
-      &-red {
-        background: #e7373d;
-      }
     }
 
     .btn-load {
@@ -203,14 +147,6 @@
         mat-card-content {
           margin-top: 5%;
           font-family: 'Montserrat', Sans-serif;
-
-          .remarques-container,
-          .demandes-container {
-            padding-right: 1%;
-            overflow-y: auto;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-          }
         }
       }
 
@@ -219,184 +155,6 @@
         div {
           margin-bottom: 3%;
         }
-      }
-
-      mat-form-field,
-      .upload-file {
-        width: 100%;
-        padding: 1% 0 2% 10%;
-
-        @media (max-width: 720px) {
-          padding: 1% 1% 2% 0;
-        }
-      }
-
-      .sous-types-container {
-        display: inline-flex;
-        margin: -1% 0 -3% 0;
-      }
-
-      .drop-zone {
-        background-color: map-get($colors, container-background);
-        color: map-get($colors, text);
-        border: dotted 3px map-get($colors, main-nav-icon);
-        height: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 20px 0;
-        font-family: 'Montserrat', Sans-serif;
-      }
-
-      .material-drop {
-        main {
-          padding: 1em;
-          font-family: Arial, Helvetica, sans-serif;
-          text-align: center;
-          margin-top: 50px;
-          display: block;
-          color: greenyellow;
-        }
-
-        label {
-          color: black;
-        }
-
-        .upload-drop-zone {
-          height: 200px;
-          border-width: 2px;
-          margin-bottom: 20px;
-        }
-        /* skin.css Style*/
-        .upload-drop-zone {
-          color: map-get($colors, container-background);
-          border-style: dashed;
-          border-color: #ccc;
-          line-height: 200px;
-          text-align: center;
-        }
-
-        .upload-drop-zone.drop {
-          color: #222;
-          border-color: #222;
-        }
-      }
-    }
-
-    .section-name {
-      @media (max-width: 720px) {
-        display: none;
-      }
-    }
-
-    .refresh:focus {
-      outline: none;
-    }
-
-    .table-container {
-      @media (max-width: 600px) {
-        height: 600px;
-      }
-      overflow: auto;
-      scroll-behavior: smooth;
-      box-shadow: none !important;
-      display: flex;
-      flex-direction: column;
-      min-width: 300px;
-
-      mat-table {
-        margin-top: 1%;
-        width: 100%;
-        overflow: auto;
-        box-shadow: none !important;
-
-        th {
-          font-family: 'Montserrat', Sans-serif;
-          font-weight: bold;
-          color: map-get($colors, table-header);
-        }
-
-        .mat-sort-header-sorted {
-          color: map-get($colors, text);
-          font-weight: 800;
-        }
-
-        .mat-column-actesL {
-          @media (min-width: 600px) {
-            max-width: 80px;
-          }
-        }
-
-        .mat-column-nomEmpl {
-          @media (min-width: 600px) {
-            max-width: 80px;
-          }
-        }
-
-        .mat-column-etatVersement {
-          width: 100%;
-
-          @media (min-width: 600px) {
-            mat-form-field {
-              width: 100px;
-            }
-          }
-        }
-
-        ::ng-deep .mat-row:hover {
-          background: rgba(0, 0, 0, 0.04);
-        }
-
-        .ripple-container {
-          cursor: pointer;
-          user-select: none;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          -webkit-user-drag: none;
-          -webkit-tap-highlight-color: transparent;
-        }
-      }
-      &-760 {
-        height: 760px;
-      }
-      &-500 {
-        height: 500px;
-      }
-    }
-
-    .mat-table {
-      overflow: auto;
-    }
-
-    .mobile-label {
-      display: none;
-    }
-
-    @media (max-width: 600px) {
-      .mobile-label {
-        width: 140px;
-        font-family: 'Montserrat', Sans-serif;
-        display: inline-block;
-        font-weight: bold;
-      }
-
-      .mat-header-row {
-        display: none;
-      }
-
-      .mat-row {
-        font-family: 'Montserrat', Sans-serif;
-        flex-direction: column;
-        align-items: start;
-        padding: 8px 24px;
-        width: 100%;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .mat-cell {
-        padding: 0;
       }
     }
 
@@ -413,163 +171,9 @@
     }
   }
 
-  .rc-container {
-    // height: 640px;
-    overflow: auto;
-    overflow-x: hidden;
-  }
-
   .divider-mobile {
     @media (min-width: 720px) {
       display: none;
-    }
-  }
-
-  .list-form {
-    .mat-form-field.is-invalid {
-      color: rgb(255, 56, 56);
-
-      .mat-form-field-label {
-        color: rgb(255, 56, 56) !important;
-      }
-
-      .mat-form-field-underline {
-        background-color: rgb(255, 56, 56) !important;
-      }
-
-      .mat-form-field-ripple {
-        background-color: rgb(255, 56, 56) !important;
-      }
-    }
-
-    .mat-form-field.is-warning {
-      color: orange;
-
-      .mat-form-field-label {
-        color: orange !important;
-      }
-
-      .mat-form-field-underline {
-        background-color: orange !important;
-      }
-
-      .mat-form-field-ripple {
-        background-color: orange !important;
-      }
-    }
-
-    .mat-form-field.mat-focused:not(.is-invalid) {
-      .mat-form-field-label {
-        color: #008eff !important;
-      }
-
-      .mat-form-field-ripple {
-        background-color: #008eff !important;
-      }
-    }
-
-    .mat-input-element {
-      caret-color: #008eff !important;
-    }
-
-    .mat-slide-toggle.mat-checked:not(.mat-disabled) {
-      .mat-slide-toggle-thumb {
-        background-color: #e9622a !important;
-      }
-
-      .mat-slide-toggle-bar {
-        background-color: rgba(247, 132, 70, 0.7) !important;
-      }
-    }
-
-    .error-form {
-      color: rgb(255, 56, 56);
-      // text-align: right;
-      font-size: 12px;
-      margin-top: -15px;
-    }
-
-    .cdk-overlay-container {
-      .mat-menu-content .mat-menu-item:hover {
-        color: #e9622a;
-
-        [class^='icon-'] {
-          &::after {
-            visibility: hidden;
-          }
-
-          &::before {
-            visibility: visible;
-          }
-        }
-      }
-
-      .mat-form-field.is-invalid {
-        color: rgb(255, 56, 56);
-
-        .mat-form-field-label {
-          color: rgb(255, 56, 56) !important;
-        }
-
-        .mat-form-field-underline {
-          background-color: rgb(255, 56, 56) !important;
-        }
-
-        .mat-form-field-ripple {
-          background-color: rgb(255, 56, 56) !important;
-        }
-      }
-
-      .mat-form-field.mat-focused:not(.is-invalid) {
-        .mat-form-field-label {
-          color: #008eff !important;
-        }
-
-        .mat-form-field-ripple {
-          background-color: #008eff !important;
-        }
-      }
-
-      .mat-input-element {
-        caret-color: #008eff !important;
-      }
-
-      .mat-primary .mat-option.mat-selected:not(.mat-option-disabled),
-      .mat-form-field.mat-focused.mat-primary .mat-select-arrow {
-        color: white !important;
-      }
-
-      .error-form {
-        color: rgb(255, 56, 56);
-        // text-align: right;
-        font-size: 12px;
-        margin-top: -15px;
-      }
-    }
-  }
-
-  .mat-expansion-panel:not([class*='mat-elevation-z']) {
-    box-shadow: none;
-  }
-
-  mat-expansion-panel {
-    mat-panel-title {
-      font-display: 'Montserrat', Sans-serif;
-      font-weight: 500;
-    }
-
-    @media (max-width: 500px) {
-      form {
-        mat-form-field {
-          width: 100%;
-          margin-left: 0 !important;
-        }
-
-        button {
-          width: 100%;
-          margin-left: 0 !important;
-        }
-      }
     }
   }
 
@@ -580,76 +184,6 @@
     display: flex;
   }
 
-  .select-month-icon {
-    font-size: 22px;
-    cursor: pointer;
-
-    &.previous-month-icon {
-      transform: rotate(180deg);
-    }
-  }
-
-  .change-month-header .mat-card-header-text {
-    margin: 0 0 !important;
-  }
-
-  .change-month {
-    .month-prev,
-    .month-text {
-      float: left;
-      margin-right: 10px;
-      font-size: 15px;
-    }
-
-    .month-prev,
-    .month-next {
-      color: map-get($colors, avatar-bar);
-    }
-
-    .month-text {
-      cursor: context-menu;
-      user-select: none;
-      font-weight: 800;
-      font-family: 'Montserrat', Sans-serif;
-    }
-  }
-
-  .select-month-icon:hover,
-  .month-text:hover {
-    color: mat-color($accent);
-  }
-
-  .select-month-icon:hover {
-    border-radius: 1000px;
-    border: none;
-    box-shadow: 0px 0px 8px mat-color($accent);
-  }
-
-  .days {
-    .temp-selected,
-    .validated-selected,
-    .current-day {
-      .secondary-dates {
-        color: #353535;
-      }
-    }
-  }
-
-  .icn {
-    &-green {
-      color: #15b76c;
-    }
-
-    &-red {
-      color: #e7373d;
-    }
-
-    &-info,
-    &-refresh {
-      color: map-get($colors, text);
-    }
-  }
-
   .primary {
     color: mat-color($primary);
   }
@@ -658,93 +192,8 @@
     color: mat-color($accent);
   }
 
-  ::ng-deep .mat-calendar-body-today:not(.mat-calendar-body-selected) {
-    background: #f44336;
-    color: white;
-    border: none;
-    box-shadow: 0px 0px 8px mat-color($accent);
-  }
-
-  ::ng-deep
-    .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover
-    > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected) {
-    color: rgba(0, 0, 0, 0.87);
-    border-radius: 999px;
-  }
-
   .container-default {
     background-color: map-get($colors, container-background);
-  }
-
-  .fa-icons-tab {
-    color: mat-color($accent);
-    margin-right: 10px;
-  }
-
-  .link-text {
-    margin-top: 6px;
-    text-decoration: none;
-    color: map-get($colors, text);
-  }
-
-  .overflowText {
-    white-space: nowrap;
-    max-width: 200px;
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    @media (max-width: 720px) {
-      max-width: 150px;
-    }
-  }
-
-  .image-placeholder {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-    opacity: 0;
-    transition: all 1s ease-out;
-  }
-
-  .leave-detail {
-    color: map-get($colors, text);
-    background-color: map-get($colors, container-background);
-  }
-
-  .empty-table {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: unset;
-    box-shadow: none !important;
-  }
-
-  .skeleton-form {
-    padding: 1% 0 2% 10%;
-  }
-
-  .title-btn-spacer {
-    margin: 10px 0 10px 0;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .sync-badge {
-    &-left {
-      margin-right: 10px;
-    }
-    &-right {
-      margin-left: 10px;
-    }
-    &-synced {
-      color: #15b76c;
-    }
-    &-not-synced {
-      color: #e7373d;
-    }
   }
 
   .center-content {
