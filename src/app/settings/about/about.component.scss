@@ -1,0 +1,12 @@
+.inline-container {
+  .app-copyright {
+    display: inline-flex;
+  }
+  .logo {
+    height: auto;
+    width: 200px;
+    align-content: start;
+    display: block;
+    margin-bottom: 30px;
+  }
+}

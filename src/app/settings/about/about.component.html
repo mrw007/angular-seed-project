@@ -1,0 +1,50 @@
+<div class="container-cs">
+  <h1>About</h1>
+
+  <div style="display: flex">
+    <span class="spacer"> </span>
+  </div>
+  <div>
+    <mat-divider></mat-divider>
+    <div class="fluid-container">
+      <div class="row">
+        <!-- First card set-->
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xl-6">
+          <!-- Avatar Card -->
+          <div class="row">
+            <div class="col">
+              <mat-card>
+                <mat-card-title> </mat-card-title>
+                <mat-card-content>
+                  <div class="inline-container">
+                    <img
+                      class="logo"
+                      src="../../assets/svgs/logo-mw.svg"
+                      alt="logo"
+                    />
+                    <div class="app-version"><b>Version: </b>{{ version }}</div>
+                    <div class="app-version">
+                      <b>Angular Version: </b>{{ angularVersion }}
+                    </div>
+                    <div class="app-copyright">
+                      © {{ toDay | date: 'yyyy' }}, &nbsp;
+                      <p class="copyright-text">Developed by &nbsp;</p>
+                      <a
+                        href="https://www.github.com/mrw007"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        mrw007
+                      </a>
+                      .
+                    </div>
+                  </div>
+                </mat-card-content>
+              </mat-card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

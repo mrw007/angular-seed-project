@@ -8,18 +8,10 @@
     [opened]="!isScreenSmall()"
   >
     <div>
-      <h3 class="module-name">Paramètres</h3>
+      <h3 class="module-name">Settings</h3>
     </div>
     <ng-container>
       <mat-list>
-        <mat-list-item
-          [routerLink]="['profil']"
-          [routerLinkActive]="['is-active']"
-          (click)="closeNav()"
-        >
-          <em mat-list-icon class="far fa-user"></em>
-          <h5 mat-line>Profil</h5>
-        </mat-list-item>
         <mat-list-item class="static-menu-item" (click)="closeNav()">
           <em
             mat-list-icon
@@ -27,7 +19,7 @@
               themeService.notDefaultTheme ? 'far fa-moon' : 'far fa-sun'
             "
           ></em>
-          <h5 mat-line>Thème</h5>
+          <h5 mat-line>Theme</h5>
           <span style="padding-right: 20px">
             <mat-slide-toggle
               [checked]="themeService.notDefaultTheme"
@@ -50,7 +42,7 @@
           (click)="closeNav()"
         >
           <em mat-list-icon class="far fa-copyright"></em>
-          <h5 mat-line>A propos</h5>
+          <h5 mat-line>About</h5>
         </mat-list-item>
       </mat-list>
     </ng-container>
