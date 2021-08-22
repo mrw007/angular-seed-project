@@ -12,7 +12,6 @@ import { LoaderInterceptor } from './interceptors/loader.interceptor';
   providers: [
     AnimationsService,
     LoaderService,
-    EnsureModuleLoadedOnceGuard,
     { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true },
   ],
 })

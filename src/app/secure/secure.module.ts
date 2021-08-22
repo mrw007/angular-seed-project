@@ -9,7 +9,7 @@ import { SidenavServiceService } from '../shared/services/sidenav-service.servic
 
 @NgModule({
   declarations: [SecureComponent, HomeComponent],
-  imports: [CommonModule, SecureRoutingModule, SharedModule],
+  imports: [SecureRoutingModule, SharedModule],
   exports: [SharedModule],
   providers: [SidenavServiceService],
 })

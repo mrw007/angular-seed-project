@@ -3,11 +3,14 @@
 ![Travis (.com) branch](https://img.shields.io/travis/com/mrw007/angular-seed-project/main)
 ![Codecov branch](https://img.shields.io/codecov/c/github/mrw007/angular-seed-project/main)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+
 by [@Mr_w_007](https://twitter.com/Mr_w_007).
 
 This is an Angular project seed based on [Angular](https://angular.io/) 12.
 
 ## Table of Content
+
+---
 
 - [Features](#🌟-features)
 - [Prerequisites](#⚡-prerequisites)

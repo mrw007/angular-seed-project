@@ -1,2 +1,28 @@
-<app-avatar-bar [name]="name" [email]="email" [enabled]="false"> </app-avatar-bar>
-<p>home works!</p>
+<app-avatar-bar [name]="name" [email]="email" [enabled]="false">
+</app-avatar-bar>
+<div class="container-cs">
+    <h1>Home</h1>
+    <div style="display: flex">
+      <span class="spacer"> </span>
+    </div>
+    <div>
+      <mat-divider></mat-divider>
+      <div class="fluid-container">
+        <div class="row">
+          <div class="col">
+            <div class="row">
+              <div class="col">
+                <mat-card>
+                  <mat-card-title> </mat-card-title>
+                  <mat-card-content>
+                    <markdown class="markdown-content" [src]="'README.md'"></markdown>
+                  </mat-card-content>
+                </mat-card>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

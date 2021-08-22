@@ -1,0 +1,11 @@
+.container-cs {
+  .fluid-container {
+    height: 800px;
+    .mat-card-content {
+      margin-top: 0 !important;
+    }
+  }
+  h1 {
+    margin-bottom: 2% !important;
+  }
+}

@@ -16,6 +16,8 @@ import {
 import { CustomSerializer, effects, reducers } from './store';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MarkdownModule } from 'ngx-markdown';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -44,6 +46,8 @@ import { SharedModule } from './shared/shared.module';
     }),
     EffectsModule.forRoot(effects),
     StoreRouterConnectingModule.forRoot(),
+    HttpClientModule,
+    MarkdownModule.forRoot({ loader: HttpClient }),
   ],
   providers: [{ provide: RouterStateSerializer, useClass: CustomSerializer }],
   bootstrap: [AppComponent],
