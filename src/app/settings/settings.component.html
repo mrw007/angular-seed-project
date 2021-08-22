@@ -1,0 +1,65 @@
+<mat-sidenav-container class="secondary-nav-container">
+  <mat-sidenav
+    class="secondary-sidenav"
+    #sidenav
+    [mode]="isScreenSmall() ? 'over' : 'side'"
+    [fixedInViewport]="isScreenSmall()"
+    mode="over"
+    [opened]="!isScreenSmall()"
+  >
+    <div>
+      <h3 class="module-name">Paramètres</h3>
+    </div>
+    <ng-container>
+      <mat-list>
+        <mat-list-item
+          [routerLink]="['profil']"
+          [routerLinkActive]="['is-active']"
+          (click)="closeNav()"
+        >
+          <em mat-list-icon class="far fa-user"></em>
+          <h5 mat-line>Profil</h5>
+        </mat-list-item>
+        <mat-list-item class="static-menu-item" (click)="closeNav()">
+          <em
+            mat-list-icon
+            [ngClass]="
+              themeService.notDefaultTheme ? 'far fa-moon' : 'far fa-sun'
+            "
+          ></em>
+          <h5 mat-line>Thème</h5>
+          <span style="padding-right: 20px">
+            <mat-slide-toggle
+              [checked]="themeService.notDefaultTheme"
+              (change)="themeService.onChangeTheme($event.checked)"
+            >
+            </mat-slide-toggle>
+          </span>
+        </mat-list-item>
+        <mat-list-item
+          [routerLink]="['changelog']"
+          [routerLinkActive]="['is-active']"
+          (click)="closeNav()"
+        >
+          <em mat-list-icon class="fab fa-readme"></em>
+          <h5 mat-line>CHANGELOG</h5>
+        </mat-list-item>
+        <mat-list-item
+          [routerLink]="['about']"
+          [routerLinkActive]="['is-active']"
+          (click)="closeNav()"
+        >
+          <em mat-list-icon class="far fa-copyright"></em>
+          <h5 mat-line>A propos</h5>
+        </mat-list-item>
+      </mat-list>
+    </ng-container>
+  </mat-sidenav>
+  <mat-sidenav-content
+    class="secondary-nav-content"
+    [@routeAnimations]="o.isActivated && o.activatedRoute.routeConfig?.path"
+  >
+    <app-avatar-bar [name]="name" [email]="email"></app-avatar-bar>
+    <router-outlet #o="outlet"></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
