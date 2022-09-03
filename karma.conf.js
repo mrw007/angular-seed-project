@@ -27,7 +27,8 @@ module.exports = function (config) {
     coverageReporter: {
       dir: require('path').join(__dirname, './coverage/angular-seed-project'),
       subdir: '.',
-      reporters: [{ type: 'html' }, { type: 'text-summary' }],
+      type: 'lcov',
+      reporters: [{ type: 'lcov' }, { type: 'html' }, { type: 'text-summary' }],
     },
     reporters: ['progress', 'kjhtml'],
     port: 9876,
