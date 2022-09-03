@@ -9,7 +9,6 @@ const SMALL_WIDTH_BREAKPOINT = 720;
 @Component({
   selector: 'app-secure',
   templateUrl: './secure.component.html',
-  styleUrls: ['./secure.component.scss'],
   animations: [routeAnimations],
 })
 export class SecureComponent implements OnInit {

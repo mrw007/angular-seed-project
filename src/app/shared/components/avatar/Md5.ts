@@ -176,7 +176,7 @@ export abstract class Md5 {
       WordToHexValue_temp = '0' + lByte.toString(16);
       WordToHexValue =
         WordToHexValue +
-        WordToHexValue_temp.substr(WordToHexValue_temp.length - 2, 2);
+        WordToHexValue_temp.slice(WordToHexValue_temp.length - 2, 2);
     }
 
     return WordToHexValue;

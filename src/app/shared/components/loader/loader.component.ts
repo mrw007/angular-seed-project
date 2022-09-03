@@ -1,9 +1,4 @@
-import {
-  AfterViewChecked,
-  ChangeDetectorRef,
-  Component,
-  OnInit,
-} from '@angular/core';
+import { AfterViewChecked, ChangeDetectorRef, Component } from '@angular/core';
 
 import { LoaderService } from 'src/app/core/services/loader.service';
 import { Subject } from 'rxjs';

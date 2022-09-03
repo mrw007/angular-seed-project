@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { SecureComponent } from './secure.component';
 
 describe('SecureComponent', () => {
-  let component: SecureComponent;
   let fixture: ComponentFixture<SecureComponent>;
 
   beforeEach(async () => {
@@ -16,7 +15,6 @@ describe('SecureComponent', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SecureComponent);
-    component = fixture.componentInstance;
     fixture.detectChanges();
   });
 });

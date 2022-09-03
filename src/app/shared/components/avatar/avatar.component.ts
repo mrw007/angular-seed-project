@@ -74,11 +74,6 @@ export class AvatarComponent implements OnInit, OnChanges {
   props: any = null;
 
   /**
-   * Constructor
-   */
-  constructor() {}
-
-  /**
    * Randomly generates a HEX color
    * @return {string}
    */
@@ -114,12 +109,9 @@ export class AvatarComponent implements OnInit, OnChanges {
    * Create a Gravatar API url
    */
   getAvatar(): void {
-    // tslint:disable-next-line
     if (
       this.email &&
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-        this.email
-      )
+      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.email)
     ) {
       const hash = Md5.init(this.email);
 
