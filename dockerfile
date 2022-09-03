@@ -1,5 +1,5 @@
 # Stage 1
-FROM node:14.17
+FROM node:16
 WORKDIR /angular-seed-project
 
 # Copy project's package

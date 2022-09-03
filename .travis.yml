@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - '12.14.1'
+  - '16'
 addons:
   chrome: stable
 env:
@@ -11,6 +11,6 @@ jobs:
   include:
     - stage: Test coverage
       script:
-        - ng test --browsers=ChromeHeadlessNoSandbox --codeCoverage=true --watch=false
+        - ng test --browsers=ChromeHeadlessNoSandbox --code-coverage=true --watch=false
       after_script:
         - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./node_modules/.bin/codecov; fi

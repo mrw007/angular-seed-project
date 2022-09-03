@@ -6,11 +6,9 @@
 
 by [@Mr_w_007](https://twitter.com/Mr_w_007).
 
-This is an Angular project seed based on [Angular](https://angular.io/) 12.
+This is an Angular project seed based on [Angular](https://angular.io/) 12 (Updated to Angular 14).
 
 ## Table of Content
-
----
 
 - [Features](#🌟-features)
 - [Prerequisites](#⚡-prerequisites)
@@ -26,8 +24,6 @@ This is an Angular project seed based on [Angular](https://angular.io/) 12.
 
 ## 🌟 Features
 
----
-
 - Dockerized project.
 - [NgRx](https://ngrx.io/) Architecture.
 - Angular [Material](https://material.angular.io/).
@@ -38,15 +34,11 @@ This is an Angular project seed based on [Angular](https://angular.io/) 12.
 
 ## ⚡ Prerequisites
 
----
-
 The project is intended to be developed in a docker environment, so it is recommended to install version 20 or higher [Docker](https://www.docker.com/community-edition) version.
 
 The dockerized project have dependencies that require Node 14, NPM 6 or higher [NodeJS](https://nodejs.org/en/) version.
 
 ## 🚧 Installation
-
----
 
 **Before you install:** Please read the [prerequisites](#prerequisites)
 
@@ -58,8 +50,6 @@ cd angular-seed-project
 ```
 
 ## 🚀 Getting Started
-
----
 
 ### **Creating the development environment**
 
@@ -85,8 +75,6 @@ sh entrypoint start-linux
 
 ## 🏃‍♂️ Starting the development server
 
----
-
 The development server is mapped automatically via the docker container networking publishing the server app by default on [localhost:8080](http://localhost:8080).
 
 The app will automatically reload if you change any of the source files.
@@ -100,8 +88,6 @@ inside the running container.
 
 ## 🔨 Building the Project
 
----
-
 Run
 
 ```bash
@@ -111,8 +97,6 @@ npm run build
 to build the project loacally. The build artifacts will be stored in the `dist/` directory.
 
 ## 🧪 Testing
-
----
 
 ### **Running unit tests**
 
@@ -136,22 +120,20 @@ to execute the end-to-end tests via a platform of your choice. To use this comma
 
 ## 🏗 Code scaffolding
 
----
-
 You can use the `ng generate` (or just `ng g`) command to generate Angular components:
 You can find all possible blueprints in the table below:
 
-| Scaffold                                                                    | Usage                             |
-| --------------------------------------------------------------------------- | --------------------------------- |
+| Scaffold | Usage |
+| | |
 | [Component](https://github.com/angular/angular-cli/wiki/generate-component) | `ng g component my-new-component` |
 | [Directive](https://github.com/angular/angular-cli/wiki/generate-directive) | `ng g directive my-new-directive` |
-| [Pipe](https://github.com/angular/angular-cli/wiki/generate-pipe)           | `ng g pipe my-new-pipe`           |
-| [Service](https://github.com/angular/angular-cli/wiki/generate-service)     | `ng g service my-new-service`     |
-| [Class](https://github.com/angular/angular-cli/wiki/generate-class)         | `ng g class my-new-class`         |
-| [Guard](https://github.com/angular/angular-cli/wiki/generate-guard)         | `ng g guard my-new-guard`         |
+| [Pipe](https://github.com/angular/angular-cli/wiki/generate-pipe) | `ng g pipe my-new-pipe` |
+| [Service](https://github.com/angular/angular-cli/wiki/generate-service) | `ng g service my-new-service` |
+| [Class](https://github.com/angular/angular-cli/wiki/generate-class) | `ng g class my-new-class` |
+| [Guard](https://github.com/angular/angular-cli/wiki/generate-guard) | `ng g guard my-new-guard` |
 | [Interface](https://github.com/angular/angular-cli/wiki/generate-interface) | `ng g interface my-new-interface` |
-| [Enum](https://github.com/angular/angular-cli/wiki/generate-enum)           | `ng g enum my-new-enum`           |
-| [Module](https://github.com/angular/angular-cli/wiki/generate-module)       | `ng g module my-module`           |
+| [Enum](https://github.com/angular/angular-cli/wiki/generate-enum) | `ng g enum my-new-enum` |
+| [Module](https://github.com/angular/angular-cli/wiki/generate-module) | `ng g module my-module` |
 
 angular-cli will add reference to `components`, `directives` and `pipes` automatically in the `app.module.ts`. If you need to add this references to another custom module, follow this steps:
 
@@ -160,8 +142,6 @@ angular-cli will add reference to `components`, `directives` and `pipes` automat
    This should add the new `component`, `directive` or `pipe` reference to the `new-module` you've created.
 
 ## 🔄 NgRx
-
----
 
 ### **What is NgRx?** 🤔
 
@@ -186,8 +166,6 @@ NgRx is a framework for building reactive applications in Angular. NgRx provides
 To get more help about Ngrx, check out [NgRx's official documentation](https://ngrx.io/) website.
 
 ## 📖 Documentation
-
----
 
 You can generate the Project's documentation with [compodoc](https://compodoc.app/) using the following command, inside the running container
 

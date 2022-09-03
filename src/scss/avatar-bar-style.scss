@@ -1,4 +1,4 @@
-@import '~@angular/material/theming';
+@import '@angular/material/theming';
 
 @mixin avatar-bar-theme($theme, $colors) {
   $primary: map-get($theme, primary);

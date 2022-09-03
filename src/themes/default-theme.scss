@@ -1,4 +1,4 @@
-@use '~@angular/material' as mat;
+@use '@angular/material' as mat;
 
 $candy-app-primary: mat.define-palette(mat.$blue-palette);
 $candy-app-accent: mat.define-palette(mat.$red-palette, 700);

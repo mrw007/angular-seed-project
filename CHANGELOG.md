@@ -3,3 +3,9 @@
 ---
 
 - Initial realease.
+
+## **1.1.0 (2022-09-03)**
+
+---
+
+- Upgraded project to Angular V14.

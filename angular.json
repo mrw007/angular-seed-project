@@ -46,7 +46,7 @@
               "node_modules/prismjs/themes/prism-okaidia.css"
             ],
             "scripts": [
-              "node_modules/marked/lib/marked.js",
+              "node_modules/marked/marked.min.js",
               "node_modules/emoji-toolkit/lib/js/joypixels.min.js",
               "node_modules/prismjs/prism.js",
               "node_modules/prismjs/components/prism-csharp.min.js",
@@ -135,8 +135,10 @@
       }
     }
   },
-  "defaultProject": "angular-seed-project",
   "cli": {
-    "defaultCollection": "@angular-eslint/schematics"
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ],
+    "analytics": "5f4be362-9c2b-4e7e-a6d7-88ae23de76e6"
   }
 }
