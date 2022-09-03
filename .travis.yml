@@ -13,4 +13,4 @@ jobs:
       script:
         - ng test --browsers=ChromeHeadlessNoSandbox --code-coverage=true --watch=false
       after_script:
-        - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then curl -Os https://uploader.codecov.io/latest/linux/codecov && cd coverage && ls -d **/* && cd.. && chmod +x codecov && ./codecov -t ${CODECOV_TOKEN}; fi
+        - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then curl -Os https://uploader.codecov.io/latest/linux/codecov && chmod +x codecov && ./codecov -t ${CODECOV_TOKEN}; fi
