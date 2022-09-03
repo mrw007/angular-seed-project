@@ -19,11 +19,6 @@ export class LoaderService {
   percentage = new Subject<number>();
 
   /**
-   * Constructor
-   */
-  constructor() {}
-
-  /**
    * Show Loader
    */
   show(): void {

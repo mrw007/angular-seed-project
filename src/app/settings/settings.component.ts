@@ -20,7 +20,6 @@ const SMALL_WIDTH_BREAKPOINT = 1280;
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
-  styleUrls: ['./settings.component.scss'],
   animations: [routeAnimations],
 })
 export class SettingsComponent implements OnInit, AfterViewChecked {
@@ -57,7 +56,8 @@ export class SettingsComponent implements OnInit, AfterViewChecked {
     public router: Router,
     public themeService: ThemeService
   ) {
-    (this.name = 'Wahib Kerkeni'), (this.email = 'mr.wahib@gmail.com');
+    this.name = 'Wahib Kerkeni';
+    this.email = 'mr.wahib@gmail.com';
     this.mediaMatcher.addEventListener('change', () =>
       zone.runOutsideAngular(
         () =>

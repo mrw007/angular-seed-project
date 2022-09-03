@@ -16,6 +16,7 @@ export class HomeComponent {
   email: string;
 
   constructor() {
-    (this.name = 'Wahib Kerkeni'), (this.email = 'mr.wahib@gmail.com');
+    this.name = 'Wahib Kerkeni';
+    this.email = 'mr.wahib@gmail.com';
   }
 }

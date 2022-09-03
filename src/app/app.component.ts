@@ -6,7 +6,6 @@ import { TokenStorageService } from './core/services/token-storage.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
   animations: [routeAnimations],
 })
 export class AppComponent implements OnInit {
