@@ -2,7 +2,7 @@ import { AfterViewChecked, ChangeDetectorRef, Component } from '@angular/core';
 
 import { LoaderService } from 'src/app/core/services/loader.service';
 import { Subject } from 'rxjs';
-import { ProgressBarMode } from '@angular/material/progress-bar';
+import { LegacyProgressBarMode as ProgressBarMode } from '@angular/material/legacy-progress-bar';
 
 /**
  * Loader Component
