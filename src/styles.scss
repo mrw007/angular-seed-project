@@ -89,21 +89,26 @@ body {
     .mat-drawer-container {
       background-color: transparent;
     }
+
     .mat-mdc-table {
       background-color: map-get($colors-dark-theme, container-background);
     }
+
     .mat-mdc-dialog-container {
       background-color: map-get($colors-dark-theme, container-background);
     }
   }
+
   .default-theme {
     .mat-drawer-container {
       background-color: transparent;
     }
+
     .mat-mdc-dialog-container {
       background-color: map-get($colors-default-theme, container-background);
     }
   }
+
   .black-theme,
   .default-theme {
     .mat-mdc-snack-bar-container {
@@ -112,7 +117,7 @@ body {
 
       .mat-mdc-simple-snack-bar {
         .mat-mdc-button {
-          color: mat-color(map-get($candy-app-theme, accent));
+          color: mat.get-theme-color($candy-app-theme, accent);
         }
       }
     }

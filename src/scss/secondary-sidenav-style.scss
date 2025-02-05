@@ -1,4 +1,4 @@
-@import '@angular/material/theming';
+@use '@angular/material' as mat;
 
 @mixin secondary-sidenav-theme($theme, $colors) {
   $primary: map-get($theme, primary);
@@ -25,7 +25,7 @@
       background-color: map-get($colors, container-background);
 
       .module-name {
-        font-family: 'Montserrat', Sans-serif;
+        font-family: 'Montserrat', Sans-serif, serif;
         display: inline-block;
         padding-left: 11%;
         padding-top: 11%;
@@ -39,6 +39,7 @@
         flex: 1;
         color: map-get($colors, header-2);
       }
+
       /* TODO(mdc-migration): The following rule targets internal classes of list that may no longer apply for the MDC version.*/
       /* TODO(mdc-migration): The following rule targets internal classes of list that may no longer apply for the MDC version.*/
       mat-list {
@@ -51,13 +52,14 @@
           border-bottom-left-radius: 39px;
           cursor: pointer;
         }
+
         /* TODO(mdc-migration): The following rule targets internal classes of list that may no longer apply for the MDC version.*/
         mat-list-item {
           outline: none;
           height: 45px;
 
           h5 {
-            font-family: 'Montserrat', Sans-serif;
+            font-family: 'Montserrat', Sans-serif, serif;
             color: map-get($colors, header-5);
             font-size: 0.9em;
           }
@@ -83,10 +85,10 @@
       }
 
       .is-active {
-        background-color: mat-color($accent) !important;
+        background-color: mat.get-theme-color($theme, accent) !important;
         border-top-left-radius: 39px;
         border-bottom-left-radius: 39px;
-        box-shadow: 0 0 8px mat-color($accent);
+        box-shadow: 0 0 8px mat.get-theme-color($theme, accent);
         outline: none;
 
         // Add an active/current color

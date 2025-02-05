@@ -1,4 +1,4 @@
-@import '@angular/material/theming';
+@use '@angular/material' as mat;
 
 @mixin app-style-theme($theme, $colors) {
   $primary: map-get($theme, primary);
@@ -39,7 +39,7 @@
     }
 
     h1 {
-      font-family: 'Montserrat', Sans-serif;
+      font-family: 'Montserrat', Sans-serif, serif;
       color: map-get($colors, header-1);
       margin-bottom: 2%;
 
@@ -50,14 +50,14 @@
     }
 
     h2 {
-      font-family: 'Montserrat', Sans-serif;
+      font-family: 'Montserrat', Sans-serif, serif;
       font-weight: lighter;
       font-size: 2rem;
       color: map-get($colors, header-2);
     }
 
     h3 {
-      font-family: 'Montserrat', Sans-serif;
+      font-family: 'Montserrat', Sans-serif, serif;
       white-space: nowrap;
       flex: 1;
       color: map-get($colors, header-3);
@@ -66,7 +66,7 @@
     }
 
     h5 {
-      font-family: 'Montserrat', Sans-serif;
+      font-family: 'Montserrat', Sans-serif, serif;
       font-size: 16px;
     }
 
@@ -75,11 +75,11 @@
     }
 
     a {
-      color: mat-color($primary);
+      color: mat.get-theme-color($theme, primary);
     }
 
     a:hover {
-      color: mat-color($accent);
+      color: mat.get-theme-color($theme, accent);
     }
 
     .spacer {
@@ -89,7 +89,7 @@
     .btn {
       margin-top: -1%;
       border-radius: 39px;
-      font-family: 'Montserrat', Sans-serif;
+      font-family: 'Montserrat', Sans-serif, serif;
       padding: 0.25em 2em 0.25em 2em;
       color: white;
     }
@@ -141,13 +141,14 @@
         }
         /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
         mat-card-title {
-          font-family: 'Montserrat', Sans-serif;
+          font-family: 'Montserrat', Sans-serif, serif;
           white-space: nowrap;
         }
+
         /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
         mat-card-content {
           margin-top: 5%;
-          font-family: 'Montserrat', Sans-serif;
+          font-family: 'Montserrat', Sans-serif, serif;
         }
       }
 
@@ -186,11 +187,11 @@
   }
 
   .primary {
-    color: mat-color($primary);
+    color: mat.get-theme-color($theme, primary);
   }
 
   .accent {
-    color: mat-color($accent);
+    color: mat.get-theme-color($theme, accent);
   }
 
   .container-default {
@@ -206,6 +207,7 @@
     h2 {
       font-weight: initial;
     }
+
     hr {
       border-top-color: map-get($colors, avatar-bar);
     }

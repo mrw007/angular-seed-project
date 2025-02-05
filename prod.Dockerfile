@@ -1,5 +1,5 @@
 # Stage 1
-FROM node:14.17 as node
+FROM node:22 as node
 WORKDIR /angular-seed-project
 
 ENV PATH=${PATH}:./node_modules/.bin
