@@ -18,9 +18,10 @@ import { SidenavServiceService } from '../shared/services/sidenav-service.servic
 const SMALL_WIDTH_BREAKPOINT = 1280;
 
 @Component({
-  selector: 'app-settings',
-  templateUrl: './settings.component.html',
-  animations: [routeAnimations],
+    selector: 'app-settings',
+    templateUrl: './settings.component.html',
+    animations: [routeAnimations],
+    standalone: false
 })
 export class SettingsComponent implements OnInit, AfterViewChecked {
   /**

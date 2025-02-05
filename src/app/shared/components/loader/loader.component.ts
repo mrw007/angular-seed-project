@@ -8,9 +8,10 @@ import { ProgressBarMode } from '@angular/material/progress-bar';
  * Loader Component
  */
 @Component({
-  selector: 'app-loader',
-  templateUrl: './loader.component.html',
-  styleUrls: ['./loader.component.scss'],
+    selector: 'app-loader',
+    templateUrl: './loader.component.html',
+    styleUrls: ['./loader.component.scss'],
+    standalone: false
 })
 export class LoaderComponent implements AfterViewChecked {
   /**

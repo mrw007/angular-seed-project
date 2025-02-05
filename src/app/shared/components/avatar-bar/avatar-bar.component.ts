@@ -5,8 +5,9 @@ import { SidenavServiceService } from '../../services/sidenav-service.service';
  * Avatar Bar Component
  */
 @Component({
-  selector: 'app-avatar-bar',
-  templateUrl: './avatar-bar.component.html',
+    selector: 'app-avatar-bar',
+    templateUrl: './avatar-bar.component.html',
+    standalone: false
 })
 export class AvatarBarComponent implements OnInit {
   /**
