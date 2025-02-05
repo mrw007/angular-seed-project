@@ -9,15 +9,13 @@ import { environment } from '../environments/environment';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
-import {
-  RouterStateSerializer,
-  StoreRouterConnectingModule,
-} from '@ngrx/router-store';
+import { RouterStateSerializer, StoreRouterConnectingModule } from '@ngrx/router-store';
 import { CustomSerializer, effects, reducers } from './store';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { MarkdownModule } from 'ngx-markdown';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -30,26 +28,28 @@ import { MarkdownModule } from 'ngx-markdown';
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
       // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000',
+      registrationStrategy: 'registerWhenStable:30000'
     }),
     StoreModule.forRoot(reducers, {
       runtimeChecks: {
         strictStateImmutability: true,
-        strictActionImmutability: true,
-      },
+        strictActionImmutability: true
+      }
     }),
     // Instrumentation must be imported after importing StoreModule (config is optional)
     StoreDevtoolsModule.instrument({
       name: 'Angular Project Seed', // Application Display Name
       maxAge: 25, // Retains last 25 states
-      logOnly: environment.production, // Restrict extension to log-only modeF
-    , connectInZone: true}),
+      logOnly: environment.production // Restrict extension to log-only modeF
+      , connectInZone: true
+    }),
     EffectsModule.forRoot(effects),
     StoreRouterConnectingModule.forRoot(),
-    HttpClientModule,
-    MarkdownModule.forRoot({ loader: HttpClient }),
+    MarkdownModule.forRoot({ loader: HttpClient })
   ],
-  providers: [{ provide: RouterStateSerializer, useClass: CustomSerializer }],
-  bootstrap: [AppComponent],
+  providers: [{ provide: RouterStateSerializer, useClass: CustomSerializer }, provideHttpClient()],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+
+export class AppModule {
+}
