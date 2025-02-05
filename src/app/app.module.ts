@@ -16,7 +16,7 @@ import {
 import { CustomSerializer, effects, reducers } from './store';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { MarkdownModule } from 'ngx-markdown';
 @NgModule({
   declarations: [AppComponent],
