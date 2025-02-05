@@ -7,9 +7,10 @@ import { routeAnimations } from '../core/animations/route.animations';
  */
 const SMALL_WIDTH_BREAKPOINT = 720;
 @Component({
-  selector: 'app-secure',
-  templateUrl: './secure.component.html',
-  animations: [routeAnimations],
+    selector: 'app-secure',
+    templateUrl: './secure.component.html',
+    animations: [routeAnimations],
+    standalone: false
 })
 export class SecureComponent implements OnInit {
   /**

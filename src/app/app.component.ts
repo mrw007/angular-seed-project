@@ -4,9 +4,10 @@ import { ThemeService } from './core/services/theme.service';
 import { TokenStorageService } from './core/services/token-storage.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  animations: [routeAnimations],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    animations: [routeAnimations],
+    standalone: false
 })
 export class AppComponent implements OnInit {
   title = 'angular-seed-project';
