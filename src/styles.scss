@@ -15,9 +15,9 @@
 //  If you specify typography styles for the components you use elsewhere, you should delete this line.
 //  If you don't need the default component typographies but still want the hierarchy styles,
 //  you can delete this line and instead use:
-//    `@include mat.legacy-typography-hierarchy(mat.define-legacy-typography-config());`
-@include mat.all-legacy-component-typographies();
-@include mat.legacy-core();
+//    `@include mat.legacy-typography-hierarchy(mat.define-typography-config());`
+@include mat.all-component-typographies();
+@include mat.core();
 
 // Define the default theme (same as the example above).
 @import './themes/default-theme.scss';
@@ -41,7 +41,7 @@
   @include avatar-bar-theme($theme, $colors);
 }
 
-@include mat.all-legacy-component-themes($candy-app-theme);
+@include mat.all-component-themes($candy-app-theme);
 // Include the default theme styles.
 .default-theme {
   @include custom-components-theme($candy-app-theme, $colors-default-theme);
@@ -51,7 +51,7 @@
 // CSS class whatever you want. In this example, any component inside of an element with
 // `.unicorn-dark-theme` will be affected by this alternate dark theme instead of the default theme.
 .black-theme {
-  @include mat.all-legacy-component-colors($black-theme);
+  @include mat.all-component-colors($black-theme);
   @include custom-components-theme($black-theme, $colors-dark-theme);
 }
 
@@ -82,16 +82,16 @@ input[type='number']::-webkit-outer-spin-button {
 
 body {
   .black-theme {
-    .mat-card,
+    .mat-mdc-card,
     .mat-expansion-panel,
-    .mat-paginator,
+    .mat-mdc-paginator,
     .mat-drawer-container {
       background-color: transparent;
     }
-    .mat-table {
+    .mat-mdc-table {
       background-color: map-get($colors-dark-theme, container-background);
     }
-    .mat-dialog-container {
+    .mat-mdc-dialog-container {
       background-color: map-get($colors-dark-theme, container-background);
     }
   }
@@ -99,18 +99,18 @@ body {
     .mat-drawer-container {
       background-color: transparent;
     }
-    .mat-dialog-container {
+    .mat-mdc-dialog-container {
       background-color: map-get($colors-default-theme, container-background);
     }
   }
   .black-theme,
   .default-theme {
-    .mat-snack-bar-container {
+    .mat-mdc-snack-bar-container {
       color: #ffeded !important;
       background-color: #424242 !important;
 
-      .mat-simple-snackbar {
-        .mat-button {
+      .mat-mdc-simple-snack-bar {
+        .mat-mdc-button {
           color: mat-color(map-get($candy-app-theme, accent));
         }
       }

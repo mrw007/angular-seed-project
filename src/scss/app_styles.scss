@@ -130,7 +130,8 @@
       overflow-y: auto;
       overflow-x: hidden;
       scroll-behavior: smooth;
-
+      /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
+      /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
       mat-card {
         box-shadow: none !important;
         margin-right: 5%;
@@ -138,12 +139,12 @@
         @media (max-width: 720px) {
           margin-right: unset;
         }
-
+        /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
         mat-card-title {
           font-family: 'Montserrat', Sans-serif;
           white-space: nowrap;
         }
-
+        /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
         mat-card-content {
           margin-top: 5%;
           font-family: 'Montserrat', Sans-serif;

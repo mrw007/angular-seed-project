@@ -39,7 +39,8 @@
         flex: 1;
         color: map-get($colors, header-2);
       }
-
+      /* TODO(mdc-migration): The following rule targets internal classes of list that may no longer apply for the MDC version.*/
+      /* TODO(mdc-migration): The following rule targets internal classes of list that may no longer apply for the MDC version.*/
       mat-list {
         padding-left: 5%;
 
@@ -50,7 +51,7 @@
           border-bottom-left-radius: 39px;
           cursor: pointer;
         }
-
+        /* TODO(mdc-migration): The following rule targets internal classes of list that may no longer apply for the MDC version.*/
         mat-list-item {
           outline: none;
           height: 45px;

@@ -92,10 +92,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-seed-project:build:production"
+              "buildTarget": "angular-seed-project:build:production"
             },
             "development": {
-              "browserTarget": "angular-seed-project:build:development"
+              "buildTarget": "angular-seed-project:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -103,7 +103,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-seed-project:build"
+            "buildTarget": "angular-seed-project:build"
           }
         },
         "test": {

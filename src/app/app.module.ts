@@ -43,7 +43,7 @@ import { MarkdownModule } from 'ngx-markdown';
       name: 'Angular Project Seed', // Application Display Name
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only modeF
-    }),
+    , connectInZone: true}),
     EffectsModule.forRoot(effects),
     StoreRouterConnectingModule.forRoot(),
     HttpClientModule,
